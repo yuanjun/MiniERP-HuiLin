@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9F5EBA9-EAFF-4472-9A54-60E5A4C95A93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERPApplication</RootNamespace>
+    <AssemblyName>ERPApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>Resources\dll\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Manager\CartonTableManager.cs" />
+    <Compile Include="Dao\CartonTableDao.cs" />
+    <Compile Include="Form\NewProductImport\CartonTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\CartonTableForm.Designer.cs">
+      <DependentUpon>CartonTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\CreatedOrderDao.cs" />
+    <Compile Include="Manager\CreatedOrderManager.cs" />
+    <Compile Include="Dao\NewSaleOrderDao.cs" />
+    <Compile Include="ExcelOperate.cs" />
+    <Compile Include="Form\SaleOrderManage\EndProductPODetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\EndProductPODetailForm.Designer.cs">
+      <DependentUpon>EndProductPODetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\EndProductPOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\EndProductPOForm.Designer.cs">
+      <DependentUpon>EndProductPOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\ClientInformationDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\ClientInformationDetailForm.Designer.cs">
+      <DependentUpon>ClientInformationDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\ClientInformationDao.cs" />
+    <Compile Include="Form\NewProductImport\NewProductListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewProductListForm.Designer.cs">
+      <DependentUpon>NewProductListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewMaterialListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewMaterialListForm.Designer.cs">
+      <DependentUpon>NewMaterialListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewProductTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewProductTypeForm.Designer.cs">
+      <DependentUpon>NewProductTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewMaterialTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewMaterialTypeForm.Designer.cs">
+      <DependentUpon>NewMaterialTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewPackingDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewPackingDetailForm.Designer.cs">
+      <DependentUpon>NewPackingDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewProductDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewProductDetailForm.Designer.cs">
+      <DependentUpon>NewProductDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewCartonDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewCartonDetailForm.Designer.cs">
+      <DependentUpon>NewCartonDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\NewProductListDao.cs" />
+    <Compile Include="Manager\NewProductListManager.cs" />
+    <Compile Include="Dao\NewMaterialListDao.cs" />
+    <Compile Include="Manager\NewMaterialListManager.cs" />
+    <Compile Include="Dao\NewPackingDetailDao.cs" />
+    <Compile Include="Manager\NewPackingDetailManager.cs" />
+    <Compile Include="Manager\NewCartonDetailDao.cs" />
+    <Compile Include="Dao\NewCartonDetailManager.cs" />
+    <Compile Include="Dao\NewProductDetailDao.cs" />
+    <Compile Include="Manager\NewProductDetailManager.cs" />
+    <Compile Include="Form\NewProductImport\NewContentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\NewContentForm.Designer.cs">
+      <DependentUpon>NewContentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\NewContentDao.cs" />
+    <Compile Include="Manager\NewContentManager.cs" />
+    <Compile Include="override\FullTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Manager\ClientInformationManager.cs" />
+    <Compile Include="DB\Config.cs" />
+    <Compile Include="DB\DBHelper.cs" />
+    <Compile Include="Form\SaleOrderManage\FinishedOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\FinishedOrderForm.Designer.cs">
+      <DependentUpon>FinishedOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\ClientInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\ClientInformationForm.Designer.cs">
+      <DependentUpon>ClientInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\NewSaleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\NewSaleOrder.Designer.cs">
+      <DependentUpon>NewSaleOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\LoginDao.cs" />
+    <Compile Include="Mail\MailConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\MailConfigForm.Designer.cs">
+      <DependentUpon>MailConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail\MailManager.cs" />
+    <Compile Include="Mail\MailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mail\MailForm.Designer.cs">
+      <DependentUpon>MailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LoginManager.cs" />
+    <Compile Include="Form\PurchaseOrderManage\POStateQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\POStateQueryForm.Designer.cs">
+      <DependentUpon>POStateQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\NewSaleOrderManager.cs" />
+    <Compile Include="Manager\PackingMaterialTableManager.cs" />
+    <Compile Include="Dao\PackingMaterialTableDao.cs" />
+    <Compile Include="Form\NewProductImport\ProductTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\ProductTableForm.Designer.cs">
+      <DependentUpon>ProductTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\ProductTableDao.cs" />
+    <Compile Include="Manager\ProductTableManager.cs" />
+    <Compile Include="Form\SaleOrderManage\ProductListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\ProductListForm.Designer.cs">
+      <DependentUpon>ProductListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\ProductListDao.cs" />
+    <Compile Include="Manager\ProductListManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\SaleOrderManage\RemovedOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\RemovedOrderForm.Designer.cs">
+      <DependentUpon>RemovedOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\UnfinishedOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\UnfinishedOrderForm.Designer.cs">
+      <DependentUpon>UnfinishedOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\UnsubmittedOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\SaleOrderManage\UnsubmittedOrderForm.Designer.cs">
+      <DependentUpon>UnsubmittedOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\RowMaterialPOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\RowMaterialPOForm.Designer.cs">
+      <DependentUpon>RowMaterialPOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\SupplierInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\SupplierInformationForm.Designer.cs">
+      <DependentUpon>SupplierInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\SupplierInformationDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\SupplierInformationDetailForm.Designer.cs">
+      <DependentUpon>SupplierInformationDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\RowMaterialPODetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PurchaseOrderManage\RowMaterialPODetailForm.Designer.cs">
+      <DependentUpon>RowMaterialPODetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NewProductImport\PackingMaterialTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NewProductImport\PackingMaterialTableForm.Designer.cs">
+      <DependentUpon>PackingMaterialTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\SupplierInformationDao.cs" />
+    <Compile Include="Dao\SupplierInformationDetailDao.cs" />
+    <Compile Include="Manager\SupplierInformationManager.cs" />
+    <Compile Include="Manager\SupplierInformationDetailManager.cs" />
+    <EmbeddedResource Include="Form\NewProductImport\CartonTableForm.resx">
+      <DependentUpon>CartonTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\NewMaterialListForm.resx">
+      <DependentUpon>NewMaterialListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\NewProductListForm.resx">
+      <DependentUpon>NewProductListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\EndProductPODetailForm.resx">
+      <DependentUpon>EndProductPODetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\EndProductPOForm.resx">
+      <DependentUpon>EndProductPOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\ClientInformationDetailForm.resx">
+      <DependentUpon>ClientInformationDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\ClientInformationForm.resx">
+      <DependentUpon>ClientInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\FinishedOrderForm.resx">
+      <DependentUpon>FinishedOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\NewSaleOrder.resx">
+      <DependentUpon>NewSaleOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\RemovedOrderForm.resx">
+      <DependentUpon>RemovedOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\UnfinishedOrderForm.resx">
+      <DependentUpon>UnfinishedOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\UnsubmittedOrderForm.resx">
+      <DependentUpon>UnsubmittedOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\MailConfigForm.resx">
+      <DependentUpon>MailConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mail\MailForm.resx">
+      <DependentUpon>MailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PurchaseOrderManage\POStateQueryForm.resx">
+      <DependentUpon>POStateQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\NewProductTypeForm.resx">
+      <DependentUpon>NewProductTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\NewMaterialTypeForm.resx">
+      <DependentUpon>NewMaterialTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\NewPackingDetailForm.resx">
+      <DependentUpon>NewPackingDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\NewProductDetailForm.resx">
+      <DependentUpon>NewProductDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\NewCartonDetailForm.resx">
+      <DependentUpon>NewCartonDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\NewContentForm.resx">
+      <DependentUpon>NewContentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\ProductTableForm.resx">
+      <DependentUpon>ProductTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SaleOrderManage\ProductListForm.resx">
+      <DependentUpon>ProductListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PurchaseOrderManage\RowMaterialPOForm.resx">
+      <DependentUpon>RowMaterialPOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PurchaseOrderManage\SupplierInformationForm.resx">
+      <DependentUpon>SupplierInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PurchaseOrderManage\SupplierInformationDetailForm.resx">
+      <DependentUpon>SupplierInformationDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PurchaseOrderManage\RowMaterialPODetailForm.resx">
+      <DependentUpon>RowMaterialPODetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NewProductImport\PackingMaterialTableForm.resx">
+      <DependentUpon>PackingMaterialTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\homeIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\loginIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\leftArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background\loginBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\portrait.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\direction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\current.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\other.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\rightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\leftArrow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\rightArrow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\materialType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\productType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\materialType.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon\productType.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
